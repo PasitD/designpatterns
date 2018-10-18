@@ -1,0 +1,15 @@
+package lab8.decorator;
+
+public class CooAdaptor implements Quackable {
+    private Cooable cooable;
+
+    public CooAdaptor(Cooable cooable) {
+        this.cooable = cooable;
+    }
+
+    @Override
+    public void quack() {
+        cooable.coo();
+        cooable.coo();
+    }
+}
